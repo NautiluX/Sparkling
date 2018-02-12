@@ -390,7 +390,7 @@ hr.section-divider {
   border-top: none;
 }
 body.archive .post-inner-content,
-body.blog 
+body.blog,
 .blog-item-wrap {
   border-top: 1px solid #dadada;;
 }

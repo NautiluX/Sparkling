@@ -1,4 +1,6 @@
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+
+<div class="blog-item-wrap">
+	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<?php
 	$featured_image_args = array(
 		'class' => 'single-featured',
@@ -13,7 +15,6 @@
 		echo '<div class="post-image-caption"><p class="post-image-caption-text">' . $caption . '</p></div>';
 	}
 	?>
-	
 	<div class="post-inner-content">
 		<header class="entry-header page-header">
 			<h1 class="entry-title "><?php the_title(); ?></h1>
@@ -103,7 +104,9 @@
 
 	  </div><!-- end .author-bio  -->
 
-		</div>
 		<?php endif; ?>
+	</div>
 
 </article><!-- #post-## -->
+
+</div>
