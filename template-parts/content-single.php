@@ -104,8 +104,8 @@
 
 	  </div><!-- end .author-bio  -->
 
-		<?php endif; ?>
-	</div>
+	  </div>
+	<?php endif; ?>
 
 </article><!-- #post-## -->
 
