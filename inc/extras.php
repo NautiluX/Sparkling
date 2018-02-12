@@ -206,7 +206,7 @@ if ( ! function_exists( 'sparkling_featured_slider' ) ) :
 							echo '<img src="' . $photon_url . '">';
 						} else {
 							echo '<div style="background-image:url(' . $feat_image_url[0] . ')" class="slider-wide">';
-							echo '<div class="slider-wide-attribution-space">x</div>';
+							echo '<div class="slider-wide-attribution-space"></div>';
 							echo '<div class="slider-wide-attribution">';
 							echo get_post(get_post_thumbnail_id())->post_excerpt;
 							echo '</div>';
@@ -220,7 +220,11 @@ if ( ! function_exists( 'sparkling_featured_slider' ) ) :
 					if ( get_the_excerpt() != '' ) { echo '<div class="excerpt">' . get_the_excerpt() . '</div>';
 					}
 					echo '</div>';
-					echo '</a></li>';
+
+					if ( of_get_option( 'sparkling_slider_link_checkbox', 1 ) == 1 ) {
+						echo '</a>';
+					}
+					echo '</li>';
 			  endwhile;
 				endif;
 			wp_reset_postdata();
