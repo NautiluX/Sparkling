@@ -206,7 +206,7 @@ if ( ! function_exists( 'sparkling_featured_slider' ) ) :
 							echo '<img src="' . $photon_url . '">';
 						} else {
 							echo '<div style="background-image:url(' . $feat_image_url[0] . ')" class="slider-wide">';
-							echo '<div class="slider-wide-attribution-space"></div>';
+							echo '<div class="slider-wide-attribution-space"> </div>';
 							echo '<div class="slider-wide-attribution">';
 							echo get_post(get_post_thumbnail_id())->post_excerpt;
 							echo '</div>';
