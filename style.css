@@ -491,6 +491,7 @@ body.blog .post-inner-content,
           transition: opacity 0.3s linear;
   display: block;
   margin: auto;
+  width: 100%;
 }
 .single-featured:hover {
   opacity: 0.8;
@@ -1730,4 +1731,11 @@ button[type=submit],
 	left: 50%;
     transform: translateX(-50%);
     width: auto;
+}
+
+.slider-wide {
+  height: 40vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }

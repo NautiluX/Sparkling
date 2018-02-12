@@ -12,7 +12,8 @@
 					the_post_thumbnail( 'sparkling-featured-fullwidth', array(
 						'class' => 'single-featured',
 					) );
-				} else {                    the_post_thumbnail( 'sparkling-featured', array(
+				} else {                    
+					the_post_thumbnail( 'sparkling-featured', array(
 					'class' => 'single-featured',
 				) );
 				}

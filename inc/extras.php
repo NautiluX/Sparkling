@@ -197,15 +197,15 @@ if ( ! function_exists( 'sparkling_featured_slider' ) ) :
 					}
 					
 					if ( (function_exists( 'has_post_thumbnail' )) && ( has_post_thumbnail() ) ) :
+						$feat_image_url = wp_get_attachment_image_src( get_post_thumbnail_id(), 'full' );
 						if ( class_exists( 'Jetpack' ) && Jetpack::is_module_active( 'photon' ) ) {
-							$feat_image_url = wp_get_attachment_image_src( get_post_thumbnail_id(), 'full' );
 							$args = array(
 								'resize' => '1920,550',
 							);
 							$photon_url = jetpack_photon_url( $feat_image_url[0], $args );
 							echo '<img src="' . $photon_url . '">';
 						} else {
-							  echo get_the_post_thumbnail( get_the_ID(), 'activello-slider' );
+							echo '<div style="background-image:url(' . $feat_image_url[0] . ')" class="slider-wide" />';
 						}
 					endif;
 
