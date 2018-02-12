@@ -41,6 +41,10 @@
 							'<i class="fa fa-pencil-square-o"></i><span class="edit-link">',
 							'</span>'
 						);
+
+						if ( $caption = get_post( get_post_thumbnail_id() )->post_excerpt ) {
+							echo '<p class="caption">' . $caption . '</p>';
+						}
 					?>
 				<?php endif; ?>
 
