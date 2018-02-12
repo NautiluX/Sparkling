@@ -190,11 +190,7 @@ if ( ! function_exists( 'sparkling_featured_slider' ) ) :
 			if ( $query->have_posts() ) :
 				while ( $query->have_posts() ) : $query->the_post();
 
-					if ( of_get_option( 'sparkling_slider_link_checkbox', 1 ) == 1 ) {
-						echo '<li><a href="' . get_permalink() . '">';
-					} else {
-						echo '<li>';
-					}
+					echo '<li>';
 					
 					if ( (function_exists( 'has_post_thumbnail' )) && ( has_post_thumbnail() ) ) :
 						$feat_image_url = wp_get_attachment_image_src( get_post_thumbnail_id(), 'full' );
@@ -213,11 +209,15 @@ if ( ! function_exists( 'sparkling_featured_slider' ) ) :
 							echo '</div>';
 						}
 					endif;
-
-					echo '<div class="flex-caption">';
-					if ( get_the_title() != '' ) { echo '<h2 class="entry-title">' . get_the_title() . '</h2>';
+					if ( of_get_option( 'sparkling_slider_link_checkbox', 1 ) == 1 ) {
+						echo '<a href="' . get_permalink() . '">';
 					}
-					if ( get_the_excerpt() != '' ) { echo '<div class="excerpt">' . get_the_excerpt() . '</div>';
+					echo '<div class="flex-caption">';
+					if ( get_the_title() != '' ) {
+						echo '<h2 class="entry-title">' . get_the_title() . '</h2>';
+					}
+					if ( get_the_excerpt() != '' ) {
+					 	echo '<div class="excerpt">' . get_the_excerpt() . '</div>';
 					}
 					echo '</div>';
 
