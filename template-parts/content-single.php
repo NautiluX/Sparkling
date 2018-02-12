@@ -8,10 +8,14 @@
 	} else {
 		the_post_thumbnail( 'sparkling-featured', $featured_image_args );
 	}
+
+	if ( $caption = get_post( get_post_thumbnail_id() )->post_excerpt ) {
+		echo '<div class="post-image-caption"><p class="post-image-caption-text">' . $caption . '</p></div>';
+	}
 	?>
+	
 	<div class="post-inner-content">
 		<header class="entry-header page-header">
-
 			<h1 class="entry-title "><?php the_title(); ?></h1>
 
 			<div class="entry-meta">

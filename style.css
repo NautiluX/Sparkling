@@ -390,8 +390,8 @@ hr.section-divider {
   border-top: none;
 }
 body.archive .post-inner-content,
-body.blog .post-inner-content,
-.post-inner-content:first-child {
+body.blog 
+.blog-item-wrap {
   border-top: 1px solid #dadada;;
 }
 .entry-title {
@@ -1754,4 +1754,17 @@ button[type=submit],
   color: #ffffff;
   font-size: 1rem;
   line-height: 1rem;
+}
+
+.post-image-caption {
+  background-color: #fff;
+  border: 1px solid #dadada;
+  border-top: none;
+  border-bottom: none;
+  margin-bottom: 0px;
+}
+
+.post-image-caption-text {
+  margin-bottom: 0px;
+  margin-left: 1rem;
 }

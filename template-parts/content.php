@@ -19,6 +19,11 @@
 				}
 				?>
 			</a>
+<?php
+if ( $caption = get_post( get_post_thumbnail_id() )->post_excerpt ) {
+	echo '<div class="post-image-caption"><p class="post-image-caption-text">' . $caption . '</p></div>';
+}
+?>
 		<div class="post-inner-content">
 			<header class="entry-header page-header">
 
@@ -41,10 +46,6 @@
 							'<i class="fa fa-pencil-square-o"></i><span class="edit-link">',
 							'</span>'
 						);
-
-						if ( $caption = get_post( get_post_thumbnail_id() )->post_excerpt ) {
-							echo '<p class="caption">' . $caption . '</p>';
-						}
 					?>
 				<?php endif; ?>
 
